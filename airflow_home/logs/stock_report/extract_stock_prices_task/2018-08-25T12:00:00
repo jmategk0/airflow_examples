@@ -1,0 +1,168 @@
+[2018-08-26 20:48:02,994] {models.py:167} INFO - Filling up the DagBag from /home/james/airflow_stuff/airflow_home/dags/stock_piplines.py
+[2018-08-26 20:48:03,659] {base_task_runner.py:112} INFO - Running: ['bash', '-c', 'airflow run stock_report extract_stock_prices_task 2018-08-25T12:00:00 --job_id 19 --raw -sd DAGS_FOLDER/stock_piplines.py']
+[2018-08-26 20:48:03,955] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:48:03,955] {__init__.py:57} INFO - Using executor SequentialExecutor
+[2018-08-26 20:48:04,102] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:48:04,102] {driver.py:124} INFO - Generating grammar tables from /usr/lib/python3.6/lib2to3/Grammar.txt
+[2018-08-26 20:48:04,124] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:48:04,124] {driver.py:124} INFO - Generating grammar tables from /usr/lib/python3.6/lib2to3/PatternGrammar.txt
+[2018-08-26 20:48:04,350] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:48:04,349] {models.py:167} INFO - Filling up the DagBag from /home/james/airflow_stuff/airflow_home/dags/stock_piplines.py
+[2018-08-26 20:48:05,041] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:48:05,041] {models.py:1126} INFO - Dependencies all met for <TaskInstance: stock_report.extract_stock_prices_task 2018-08-25 12:00:00 [queued]>
+[2018-08-26 20:48:05,043] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:48:05,043] {models.py:1126} INFO - Dependencies all met for <TaskInstance: stock_report.extract_stock_prices_task 2018-08-25 12:00:00 [queued]>
+[2018-08-26 20:48:05,043] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:48:05,043] {models.py:1318} INFO - 
+[2018-08-26 20:48:05,043] {base_task_runner.py:95} INFO - Subtask: --------------------------------------------------------------------------------
+[2018-08-26 20:48:05,043] {base_task_runner.py:95} INFO - Subtask: Starting attempt 1 of 4
+[2018-08-26 20:48:05,043] {base_task_runner.py:95} INFO - Subtask: --------------------------------------------------------------------------------
+[2018-08-26 20:48:05,043] {base_task_runner.py:95} INFO - Subtask: 
+[2018-08-26 20:48:05,053] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:48:05,053] {models.py:1342} INFO - Executing <Task(PythonOperator): extract_stock_prices_task> on 2018-08-25 12:00:00
+[2018-08-26 20:48:05,061] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:48:05,060] {models.py:1417} ERROR - name 'image_url' is not defined
+[2018-08-26 20:48:05,061] {base_task_runner.py:95} INFO - Subtask: Traceback (most recent call last):
+[2018-08-26 20:48:05,061] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/models.py", line 1374, in run
+[2018-08-26 20:48:05,061] {base_task_runner.py:95} INFO - Subtask:     result = task_copy.execute(context=context)
+[2018-08-26 20:48:05,062] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/operators/python_operator.py", line 80, in execute
+[2018-08-26 20:48:05,062] {base_task_runner.py:95} INFO - Subtask:     return_value = self.python_callable(*self.op_args, **self.op_kwargs)
+[2018-08-26 20:48:05,062] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/airflow_home/dags/stock_piplines.py", line 55, in download_file
+[2018-08-26 20:48:05,062] {base_task_runner.py:95} INFO - Subtask:     r = requests.get(image_url)
+[2018-08-26 20:48:05,062] {base_task_runner.py:95} INFO - Subtask: NameError: name 'image_url' is not defined
+[2018-08-26 20:48:05,062] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:48:05,061] {models.py:1433} INFO - Marking task as UP_FOR_RETRY
+[2018-08-26 20:48:05,070] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:48:05,069] {models.py:1462} ERROR - name 'image_url' is not defined
+[2018-08-26 20:48:05,070] {base_task_runner.py:95} INFO - Subtask: /home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/ti_deps/deps/base_ti_dep.py:94: DeprecationWarning: generator '_get_dep_statuses' raised StopIteration
+[2018-08-26 20:48:05,070] {base_task_runner.py:95} INFO - Subtask:   for dep_status in self._get_dep_statuses(ti, session, dep_context):
+[2018-08-26 20:48:05,071] {base_task_runner.py:95} INFO - Subtask: Traceback (most recent call last):
+[2018-08-26 20:48:05,071] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/bin/airflow", line 28, in <module>
+[2018-08-26 20:48:05,071] {base_task_runner.py:95} INFO - Subtask:     args.func(args)
+[2018-08-26 20:48:05,071] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/bin/cli.py", line 422, in run
+[2018-08-26 20:48:05,071] {base_task_runner.py:95} INFO - Subtask:     pool=args.pool,
+[2018-08-26 20:48:05,071] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/utils/db.py", line 53, in wrapper
+[2018-08-26 20:48:05,071] {base_task_runner.py:95} INFO - Subtask:     result = func(*args, **kwargs)
+[2018-08-26 20:48:05,071] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/models.py", line 1374, in run
+[2018-08-26 20:48:05,071] {base_task_runner.py:95} INFO - Subtask:     result = task_copy.execute(context=context)
+[2018-08-26 20:48:05,071] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/operators/python_operator.py", line 80, in execute
+[2018-08-26 20:48:05,071] {base_task_runner.py:95} INFO - Subtask:     return_value = self.python_callable(*self.op_args, **self.op_kwargs)
+[2018-08-26 20:48:05,071] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/airflow_home/dags/stock_piplines.py", line 55, in download_file
+[2018-08-26 20:48:05,071] {base_task_runner.py:95} INFO - Subtask:     r = requests.get(image_url)
+[2018-08-26 20:48:05,071] {base_task_runner.py:95} INFO - Subtask: NameError: name 'image_url' is not defined
+[2018-08-26 20:48:08,657] {jobs.py:2083} INFO - Task exited with return code 1
+[2018-08-26 20:53:12,292] {models.py:167} INFO - Filling up the DagBag from /home/james/airflow_stuff/airflow_home/dags/stock_piplines.py
+[2018-08-26 20:53:12,988] {base_task_runner.py:112} INFO - Running: ['bash', '-c', 'airflow run stock_report extract_stock_prices_task 2018-08-25T12:00:00 --job_id 22 --raw -sd DAGS_FOLDER/stock_piplines.py']
+[2018-08-26 20:53:13,232] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:53:13,232] {__init__.py:57} INFO - Using executor SequentialExecutor
+[2018-08-26 20:53:13,360] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:53:13,360] {driver.py:124} INFO - Generating grammar tables from /usr/lib/python3.6/lib2to3/Grammar.txt
+[2018-08-26 20:53:13,384] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:53:13,384] {driver.py:124} INFO - Generating grammar tables from /usr/lib/python3.6/lib2to3/PatternGrammar.txt
+[2018-08-26 20:53:13,590] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:53:13,590] {models.py:167} INFO - Filling up the DagBag from /home/james/airflow_stuff/airflow_home/dags/stock_piplines.py
+[2018-08-26 20:53:14,234] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:53:14,234] {models.py:1126} INFO - Dependencies all met for <TaskInstance: stock_report.extract_stock_prices_task 2018-08-25 12:00:00 [queued]>
+[2018-08-26 20:53:14,236] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:53:14,236] {models.py:1126} INFO - Dependencies all met for <TaskInstance: stock_report.extract_stock_prices_task 2018-08-25 12:00:00 [queued]>
+[2018-08-26 20:53:14,236] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:53:14,236] {models.py:1318} INFO - 
+[2018-08-26 20:53:14,236] {base_task_runner.py:95} INFO - Subtask: --------------------------------------------------------------------------------
+[2018-08-26 20:53:14,236] {base_task_runner.py:95} INFO - Subtask: Starting attempt 2 of 4
+[2018-08-26 20:53:14,237] {base_task_runner.py:95} INFO - Subtask: --------------------------------------------------------------------------------
+[2018-08-26 20:53:14,237] {base_task_runner.py:95} INFO - Subtask: 
+[2018-08-26 20:53:14,247] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:53:14,247] {models.py:1342} INFO - Executing <Task(PythonOperator): extract_stock_prices_task> on 2018-08-25 12:00:00
+[2018-08-26 20:53:14,686] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:53:14,685] {models.py:1417} ERROR - name 'DATA_FILE' is not defined
+[2018-08-26 20:53:14,686] {base_task_runner.py:95} INFO - Subtask: Traceback (most recent call last):
+[2018-08-26 20:53:14,686] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/models.py", line 1374, in run
+[2018-08-26 20:53:14,686] {base_task_runner.py:95} INFO - Subtask:     result = task_copy.execute(context=context)
+[2018-08-26 20:53:14,686] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/operators/python_operator.py", line 80, in execute
+[2018-08-26 20:53:14,686] {base_task_runner.py:95} INFO - Subtask:     return_value = self.python_callable(*self.op_args, **self.op_kwargs)
+[2018-08-26 20:53:14,686] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/airflow_home/dags/stock_piplines.py", line 56, in download_file
+[2018-08-26 20:53:14,686] {base_task_runner.py:95} INFO - Subtask:     with open(DATA_FILE,'wb') as f:
+[2018-08-26 20:53:14,686] {base_task_runner.py:95} INFO - Subtask: NameError: name 'DATA_FILE' is not defined
+[2018-08-26 20:53:14,686] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:53:14,686] {models.py:1433} INFO - Marking task as UP_FOR_RETRY
+[2018-08-26 20:53:14,695] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:53:14,695] {models.py:1462} ERROR - name 'DATA_FILE' is not defined
+[2018-08-26 20:53:14,696] {base_task_runner.py:95} INFO - Subtask: /home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/ti_deps/deps/base_ti_dep.py:94: DeprecationWarning: generator '_get_dep_statuses' raised StopIteration
+[2018-08-26 20:53:14,696] {base_task_runner.py:95} INFO - Subtask:   for dep_status in self._get_dep_statuses(ti, session, dep_context):
+[2018-08-26 20:53:14,697] {base_task_runner.py:95} INFO - Subtask: Traceback (most recent call last):
+[2018-08-26 20:53:14,697] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/bin/airflow", line 28, in <module>
+[2018-08-26 20:53:14,697] {base_task_runner.py:95} INFO - Subtask:     args.func(args)
+[2018-08-26 20:53:14,697] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/bin/cli.py", line 422, in run
+[2018-08-26 20:53:14,697] {base_task_runner.py:95} INFO - Subtask:     pool=args.pool,
+[2018-08-26 20:53:14,697] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/utils/db.py", line 53, in wrapper
+[2018-08-26 20:53:14,697] {base_task_runner.py:95} INFO - Subtask:     result = func(*args, **kwargs)
+[2018-08-26 20:53:14,697] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/models.py", line 1374, in run
+[2018-08-26 20:53:14,697] {base_task_runner.py:95} INFO - Subtask:     result = task_copy.execute(context=context)
+[2018-08-26 20:53:14,697] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/operators/python_operator.py", line 80, in execute
+[2018-08-26 20:53:14,697] {base_task_runner.py:95} INFO - Subtask:     return_value = self.python_callable(*self.op_args, **self.op_kwargs)
+[2018-08-26 20:53:14,697] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/airflow_home/dags/stock_piplines.py", line 56, in download_file
+[2018-08-26 20:53:14,697] {base_task_runner.py:95} INFO - Subtask:     with open(DATA_FILE,'wb') as f:
+[2018-08-26 20:53:14,697] {base_task_runner.py:95} INFO - Subtask: NameError: name 'DATA_FILE' is not defined
+[2018-08-26 20:53:17,998] {jobs.py:2083} INFO - Task exited with return code 1
+[2018-08-26 20:58:19,364] {models.py:167} INFO - Filling up the DagBag from /home/james/airflow_stuff/airflow_home/dags/stock_piplines.py
+[2018-08-26 20:58:19,975] {base_task_runner.py:112} INFO - Running: ['bash', '-c', 'airflow run stock_report extract_stock_prices_task 2018-08-25T12:00:00 --job_id 25 --raw -sd DAGS_FOLDER/stock_piplines.py']
+[2018-08-26 20:58:20,209] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:58:20,209] {__init__.py:57} INFO - Using executor SequentialExecutor
+[2018-08-26 20:58:20,318] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:58:20,317] {driver.py:124} INFO - Generating grammar tables from /usr/lib/python3.6/lib2to3/Grammar.txt
+[2018-08-26 20:58:20,337] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:58:20,337] {driver.py:124} INFO - Generating grammar tables from /usr/lib/python3.6/lib2to3/PatternGrammar.txt
+[2018-08-26 20:58:20,507] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:58:20,506] {models.py:167} INFO - Filling up the DagBag from /home/james/airflow_stuff/airflow_home/dags/stock_piplines.py
+[2018-08-26 20:58:21,061] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:58:21,061] {models.py:1126} INFO - Dependencies all met for <TaskInstance: stock_report.extract_stock_prices_task 2018-08-25 12:00:00 [queued]>
+[2018-08-26 20:58:21,063] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:58:21,062] {models.py:1126} INFO - Dependencies all met for <TaskInstance: stock_report.extract_stock_prices_task 2018-08-25 12:00:00 [queued]>
+[2018-08-26 20:58:21,063] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:58:21,062] {models.py:1318} INFO - 
+[2018-08-26 20:58:21,063] {base_task_runner.py:95} INFO - Subtask: --------------------------------------------------------------------------------
+[2018-08-26 20:58:21,063] {base_task_runner.py:95} INFO - Subtask: Starting attempt 3 of 4
+[2018-08-26 20:58:21,063] {base_task_runner.py:95} INFO - Subtask: --------------------------------------------------------------------------------
+[2018-08-26 20:58:21,063] {base_task_runner.py:95} INFO - Subtask: 
+[2018-08-26 20:58:21,088] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:58:21,088] {models.py:1342} INFO - Executing <Task(PythonOperator): extract_stock_prices_task> on 2018-08-25 12:00:00
+[2018-08-26 20:58:21,464] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:58:21,463] {models.py:1417} ERROR - name 'DATA_FILE' is not defined
+[2018-08-26 20:58:21,464] {base_task_runner.py:95} INFO - Subtask: Traceback (most recent call last):
+[2018-08-26 20:58:21,464] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/models.py", line 1374, in run
+[2018-08-26 20:58:21,464] {base_task_runner.py:95} INFO - Subtask:     result = task_copy.execute(context=context)
+[2018-08-26 20:58:21,464] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/operators/python_operator.py", line 80, in execute
+[2018-08-26 20:58:21,464] {base_task_runner.py:95} INFO - Subtask:     return_value = self.python_callable(*self.op_args, **self.op_kwargs)
+[2018-08-26 20:58:21,464] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/airflow_home/dags/stock_piplines.py", line 56, in download_file
+[2018-08-26 20:58:21,464] {base_task_runner.py:95} INFO - Subtask:     with open(DATA_FILE,'wb') as f:
+[2018-08-26 20:58:21,464] {base_task_runner.py:95} INFO - Subtask: NameError: name 'DATA_FILE' is not defined
+[2018-08-26 20:58:21,464] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:58:21,464] {models.py:1433} INFO - Marking task as UP_FOR_RETRY
+[2018-08-26 20:58:21,473] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 20:58:21,473] {models.py:1462} ERROR - name 'DATA_FILE' is not defined
+[2018-08-26 20:58:21,473] {base_task_runner.py:95} INFO - Subtask: /home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/ti_deps/deps/base_ti_dep.py:94: DeprecationWarning: generator '_get_dep_statuses' raised StopIteration
+[2018-08-26 20:58:21,473] {base_task_runner.py:95} INFO - Subtask:   for dep_status in self._get_dep_statuses(ti, session, dep_context):
+[2018-08-26 20:58:21,474] {base_task_runner.py:95} INFO - Subtask: Traceback (most recent call last):
+[2018-08-26 20:58:21,474] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/bin/airflow", line 28, in <module>
+[2018-08-26 20:58:21,474] {base_task_runner.py:95} INFO - Subtask:     args.func(args)
+[2018-08-26 20:58:21,474] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/bin/cli.py", line 422, in run
+[2018-08-26 20:58:21,474] {base_task_runner.py:95} INFO - Subtask:     pool=args.pool,
+[2018-08-26 20:58:21,474] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/utils/db.py", line 53, in wrapper
+[2018-08-26 20:58:21,474] {base_task_runner.py:95} INFO - Subtask:     result = func(*args, **kwargs)
+[2018-08-26 20:58:21,474] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/models.py", line 1374, in run
+[2018-08-26 20:58:21,475] {base_task_runner.py:95} INFO - Subtask:     result = task_copy.execute(context=context)
+[2018-08-26 20:58:21,475] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/operators/python_operator.py", line 80, in execute
+[2018-08-26 20:58:21,475] {base_task_runner.py:95} INFO - Subtask:     return_value = self.python_callable(*self.op_args, **self.op_kwargs)
+[2018-08-26 20:58:21,475] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/airflow_home/dags/stock_piplines.py", line 56, in download_file
+[2018-08-26 20:58:21,475] {base_task_runner.py:95} INFO - Subtask:     with open(DATA_FILE,'wb') as f:
+[2018-08-26 20:58:21,475] {base_task_runner.py:95} INFO - Subtask: NameError: name 'DATA_FILE' is not defined
+[2018-08-26 20:58:24,979] {jobs.py:2083} INFO - Task exited with return code 1
+[2018-08-26 21:03:26,561] {models.py:167} INFO - Filling up the DagBag from /home/james/airflow_stuff/airflow_home/dags/stock_piplines.py
+[2018-08-26 21:03:27,192] {base_task_runner.py:112} INFO - Running: ['bash', '-c', 'airflow run stock_report extract_stock_prices_task 2018-08-25T12:00:00 --job_id 28 --raw -sd DAGS_FOLDER/stock_piplines.py']
+[2018-08-26 21:03:27,434] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 21:03:27,434] {__init__.py:57} INFO - Using executor SequentialExecutor
+[2018-08-26 21:03:27,581] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 21:03:27,580] {driver.py:124} INFO - Generating grammar tables from /usr/lib/python3.6/lib2to3/Grammar.txt
+[2018-08-26 21:03:27,608] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 21:03:27,608] {driver.py:124} INFO - Generating grammar tables from /usr/lib/python3.6/lib2to3/PatternGrammar.txt
+[2018-08-26 21:03:27,865] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 21:03:27,865] {models.py:167} INFO - Filling up the DagBag from /home/james/airflow_stuff/airflow_home/dags/stock_piplines.py
+[2018-08-26 21:03:28,562] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 21:03:28,562] {models.py:1126} INFO - Dependencies all met for <TaskInstance: stock_report.extract_stock_prices_task 2018-08-25 12:00:00 [queued]>
+[2018-08-26 21:03:28,565] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 21:03:28,564] {models.py:1126} INFO - Dependencies all met for <TaskInstance: stock_report.extract_stock_prices_task 2018-08-25 12:00:00 [queued]>
+[2018-08-26 21:03:28,565] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 21:03:28,564] {models.py:1318} INFO - 
+[2018-08-26 21:03:28,565] {base_task_runner.py:95} INFO - Subtask: --------------------------------------------------------------------------------
+[2018-08-26 21:03:28,565] {base_task_runner.py:95} INFO - Subtask: Starting attempt 4 of 4
+[2018-08-26 21:03:28,565] {base_task_runner.py:95} INFO - Subtask: --------------------------------------------------------------------------------
+[2018-08-26 21:03:28,565] {base_task_runner.py:95} INFO - Subtask: 
+[2018-08-26 21:03:28,577] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 21:03:28,576] {models.py:1342} INFO - Executing <Task(PythonOperator): extract_stock_prices_task> on 2018-08-25 12:00:00
+[2018-08-26 21:03:29,008] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 21:03:29,007] {models.py:1417} ERROR - name 'DATA_FILE' is not defined
+[2018-08-26 21:03:29,008] {base_task_runner.py:95} INFO - Subtask: Traceback (most recent call last):
+[2018-08-26 21:03:29,008] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/models.py", line 1374, in run
+[2018-08-26 21:03:29,008] {base_task_runner.py:95} INFO - Subtask:     result = task_copy.execute(context=context)
+[2018-08-26 21:03:29,008] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/operators/python_operator.py", line 80, in execute
+[2018-08-26 21:03:29,008] {base_task_runner.py:95} INFO - Subtask:     return_value = self.python_callable(*self.op_args, **self.op_kwargs)
+[2018-08-26 21:03:29,008] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/airflow_home/dags/stock_piplines.py", line 56, in download_file
+[2018-08-26 21:03:29,009] {base_task_runner.py:95} INFO - Subtask:     with open(DATA_FILE,'wb') as f:
+[2018-08-26 21:03:29,009] {base_task_runner.py:95} INFO - Subtask: NameError: name 'DATA_FILE' is not defined
+[2018-08-26 21:03:29,009] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 21:03:29,009] {models.py:1439} INFO - All retries failed; marking task as FAILED
+[2018-08-26 21:03:29,030] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 21:03:29,029] {models.py:1462} ERROR - name 'DATA_FILE' is not defined
+[2018-08-26 21:03:29,030] {base_task_runner.py:95} INFO - Subtask: /home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/ti_deps/deps/base_ti_dep.py:94: DeprecationWarning: generator '_get_dep_statuses' raised StopIteration
+[2018-08-26 21:03:29,030] {base_task_runner.py:95} INFO - Subtask:   for dep_status in self._get_dep_statuses(ti, session, dep_context):
+[2018-08-26 21:03:29,031] {base_task_runner.py:95} INFO - Subtask: Traceback (most recent call last):
+[2018-08-26 21:03:29,031] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/bin/airflow", line 28, in <module>
+[2018-08-26 21:03:29,032] {base_task_runner.py:95} INFO - Subtask:     args.func(args)
+[2018-08-26 21:03:29,032] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/bin/cli.py", line 422, in run
+[2018-08-26 21:03:29,032] {base_task_runner.py:95} INFO - Subtask:     pool=args.pool,
+[2018-08-26 21:03:29,032] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/utils/db.py", line 53, in wrapper
+[2018-08-26 21:03:29,032] {base_task_runner.py:95} INFO - Subtask:     result = func(*args, **kwargs)
+[2018-08-26 21:03:29,032] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/models.py", line 1374, in run
+[2018-08-26 21:03:29,032] {base_task_runner.py:95} INFO - Subtask:     result = task_copy.execute(context=context)
+[2018-08-26 21:03:29,032] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/operators/python_operator.py", line 80, in execute
+[2018-08-26 21:03:29,032] {base_task_runner.py:95} INFO - Subtask:     return_value = self.python_callable(*self.op_args, **self.op_kwargs)
+[2018-08-26 21:03:29,032] {base_task_runner.py:95} INFO - Subtask:   File "/home/james/airflow_stuff/airflow_home/dags/stock_piplines.py", line 56, in download_file
+[2018-08-26 21:03:29,032] {base_task_runner.py:95} INFO - Subtask:     with open(DATA_FILE,'wb') as f:
+[2018-08-26 21:03:29,032] {base_task_runner.py:95} INFO - Subtask: NameError: name 'DATA_FILE' is not defined
+[2018-08-26 21:03:32,201] {jobs.py:2083} INFO - Task exited with return code 1

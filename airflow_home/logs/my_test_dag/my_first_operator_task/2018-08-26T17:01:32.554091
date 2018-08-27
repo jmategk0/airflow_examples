@@ -1,0 +1,20 @@
+[2018-08-26 17:03:24,046] {models.py:167} INFO - Filling up the DagBag from /home/james/airflow_stuff/airflow_home/dags/test_operators.py
+[2018-08-26 17:03:24,386] {base_task_runner.py:112} INFO - Running: ['bash', '-c', 'airflow run my_test_dag my_first_operator_task 2018-08-26T17:01:32.554091 --job_id 17 --raw -sd DAGS_FOLDER/test_operators.py']
+[2018-08-26 17:03:24,605] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 17:03:24,605] {__init__.py:57} INFO - Using executor SequentialExecutor
+[2018-08-26 17:03:24,718] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 17:03:24,717] {driver.py:124} INFO - Generating grammar tables from /usr/lib/python3.6/lib2to3/Grammar.txt
+[2018-08-26 17:03:24,737] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 17:03:24,737] {driver.py:124} INFO - Generating grammar tables from /usr/lib/python3.6/lib2to3/PatternGrammar.txt
+[2018-08-26 17:03:24,913] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 17:03:24,913] {models.py:167} INFO - Filling up the DagBag from /home/james/airflow_stuff/airflow_home/dags/test_operators.py
+[2018-08-26 17:03:25,224] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 17:03:25,224] {models.py:1126} INFO - Dependencies all met for <TaskInstance: my_test_dag.my_first_operator_task 2018-08-26 17:01:32.554091 [queued]>
+[2018-08-26 17:03:25,227] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 17:03:25,227] {models.py:1126} INFO - Dependencies all met for <TaskInstance: my_test_dag.my_first_operator_task 2018-08-26 17:01:32.554091 [queued]>
+[2018-08-26 17:03:25,227] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 17:03:25,227] {models.py:1318} INFO - 
+[2018-08-26 17:03:25,227] {base_task_runner.py:95} INFO - Subtask: --------------------------------------------------------------------------------
+[2018-08-26 17:03:25,227] {base_task_runner.py:95} INFO - Subtask: Starting attempt 1 of 1
+[2018-08-26 17:03:25,227] {base_task_runner.py:95} INFO - Subtask: --------------------------------------------------------------------------------
+[2018-08-26 17:03:25,227] {base_task_runner.py:95} INFO - Subtask: 
+[2018-08-26 17:03:25,237] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 17:03:25,236] {models.py:1342} INFO - Executing <Task(MyFirstOperator): my_first_operator_task> on 2018-08-26 17:01:32.554091
+[2018-08-26 17:03:25,244] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 17:03:25,243] {my_operators.py:19} INFO - Hello World!
+[2018-08-26 17:03:25,244] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 17:03:25,244] {my_operators.py:20} INFO - operator_param: This is a test.
+[2018-08-26 17:03:25,247] {base_task_runner.py:95} INFO - Subtask: [2018-08-26 17:03:25,245] {my_operators.py:23} INFO - Valid minute as determined by sensor: None
+[2018-08-26 17:03:25,263] {base_task_runner.py:95} INFO - Subtask: /home/james/airflow_stuff/venv/lib/python3.6/site-packages/airflow/ti_deps/deps/base_ti_dep.py:94: DeprecationWarning: generator '_get_dep_statuses' raised StopIteration
+[2018-08-26 17:03:25,263] {base_task_runner.py:95} INFO - Subtask:   for dep_status in self._get_dep_statuses(ti, session, dep_context):
+[2018-08-26 17:03:29,396] {jobs.py:2083} INFO - Task exited with return code 0
